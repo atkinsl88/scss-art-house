@@ -1,0 +1,967 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Colours
+$background-color: #f0e7e0;
+$house-color: #e9d8d0;
+$roof-color: #556676;
+$brick-color: #e0ccbe;
+$window-frame-color: #55595f;
+$window-inner-color-dark: #c7bcb2;
+$window-inner-color-light: #f0e4de;
+$step-color-dark: #dfd3ce;
+$step-color-light: #e8dcd6;
+$door-color: #afbac2;
+$road-color: #f5eee6;
+$grass-color: #a09b87;
+$leaf-color: #597159;
+$flower-color: #884a2e;
+$trunk-color: #d4c3af;
+$tree-color-dark: #a5b1a5;
+$tree-color-light: #c3bca9;
+
+.house-wrapper {
+  .gradient-shape {
+    // Colors and sizes
+    background: radial-gradient(circle, #ec8f46 0%, rgba(255, 170, 142, 0) 100%);
+    -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 30%, transparent 50%);
+    mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 30%, transparent 50%);
+    width: 54vw;
+    height: 54vw;
+    opacity: .5;
+    // Positioning and transforms
+    position: absolute;
+    left: 30vw;
+    top: -10vw;
+    z-index: -3;
+  }
+  // Colors and sizes
+  height: 100%;
+  width: 100%;
+  background: $background-color;
+  // Positioning and transforms
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  .house {
+    // Colors and sizes
+    width: 600px;
+    height: 500px;
+    background: $house-color;
+    // Positioning and transforms
+    .roof {
+      // Colors and sizes
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 310px 280px;
+      border-color: transparent transparent $roof-color transparent;
+      // Positioning and transforms
+      position: relative;
+      bottom: 280px;
+      left: -10px;
+      &__layer__2 {
+        // Colors and sizes
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 300px 270px;
+        border-color: transparent transparent $house-color transparent;
+        // Positioning and transforms
+        position: relative;
+        bottom: -10px;
+        right: 300px;
+      }
+      &__layer__3 {
+        // Colors and sizes
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 330px 310px;
+        border-color: transparent transparent $house-color transparent;
+        // Positioning and transforms
+        position: relative;
+        bottom: 300px;
+        right: 330px;
+        z-index: -2;
+      }
+      &__layer__4 {
+        // Colors and sizes
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 360px 335px;
+        border-color: transparent transparent $roof-color transparent;
+        // Positioning and transforms
+        position: relative;
+        bottom: 635px;
+        right: 360px;
+        z-index: -3;
+      }
+    }
+    .windows {
+      position: relative;
+      bottom: 250px;
+      .window {
+        &__01 {
+          // Colors and sizes
+          width: 100px;
+          height: 100px;
+          background: #FFFFFF;
+          // Positioning and transforms
+          position: relative;
+          left: 250px;
+          top: -200px;
+          &__curtain {
+            // Colors and sizes
+            height: 0;
+            // Positioning and transforms
+            position: relative;
+            &__01 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 60px solid #9f7d7b;
+            border-right: 50px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            }
+            &__02 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 58px solid #9f7d7b;
+            border-left: 50px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            bottom: 60px;
+            left: 50px;
+            }
+          }
+          &__frame {
+            height: 100%;
+            background-color: $window-inner-color-dark;
+            &__01 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: 0;
+              left: 0;
+            }
+            &__02 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -52px;
+              left: 50px;
+            }
+            &__03 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -54px;
+              left: 50px;
+            }
+            &__04 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -106px;
+            }
+          }
+          &__planter {
+            // Colors and sizes
+            height: 40px;
+            width: 140px;
+            background-color: #d4bbaf;
+            border-top: 5px solid $window-frame-color;
+            // Positioning and transforms
+            position: relative;
+            top: -12px;
+            left: -18px;
+            &__plant__01 {
+              position: relative;
+              left: 10px;
+              &__leaf__01 {
+                // Colors and sizes
+                width: 15px; height: 15px;
+                background-color: $leaf-color; 
+                border-radius: 0 100px;
+                // Positioning and transforms
+                position: relative;
+                bottom: 20px;
+                left: 85px;
+              }
+              &__leaf__02 {
+                // Colors and sizes
+                width: 15px; height: 15px;
+                background-color: $leaf-color; 
+                border-radius: 100px 0;
+                // Positioning and transforms
+                position: relative;
+                bottom: 35px;
+                left: 100px;
+              }
+              &__flower__01 {
+                // Colors and sizes
+                width: 15px; height: 15px;
+                background-color: $flower-color; 
+                border-radius: 50%;
+                // Positioning and transforms
+                position: relative;
+                bottom: 80px;
+                left: 92px;
+              }
+              &__stem__01 {
+                // Colors and sizes
+                width: 4px; 
+                height: 15px;
+                background-color: $leaf-color; 
+                // Positioning and transforms
+                position: relative;
+                bottom: 52px;
+                left: 98px;
+              }
+            }
+          }
+        }
+        &__02 {
+          // Colors and sizes
+          width: 110px;
+          height: 140px;
+          // background: #FFFFFF;
+          // Positioning and transforms
+          position: relative;
+          top: -125px;
+          left: 400px;
+          &__gradient {
+            -webkit-animation: scalegradientShape 8s ease-in-out infinite;
+            animation: scalegradientShape 8s ease-in-out infinite;
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+            background: radial-gradient(circle,#f4ca75 0,rgba(255,170,142,0) 100%);
+            height: 10rem;
+            left: -1rem;
+            -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%,#000 30%,transparent 50%);
+            mask-image: radial-gradient(ellipse 100% 100% at 50% 50%,#000 30%,transparent 50%);
+            opacity: .5;
+            pointer-events: none;
+            position: absolute;
+            top: -1rem;
+            width: 9rem;
+          }
+          &__curtain {
+            // Colors and sizes
+            height: 0;
+            // Positioning and transforms
+            position: relative;
+            &__01 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 84px solid #9f7d7b;
+            border-right: 54px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            }
+            &__02 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 84px solid #9f7d7b;
+            border-left: 54px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            bottom: 84px;
+            left: 56px;
+            }
+          }
+          &__frame {
+            height: 100%;
+            background-color: $window-inner-color-light;
+            &__01 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: 0;
+              left: -1px;
+            }
+            &__02 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -71px;
+              left: 54px;
+            }
+            &__03 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -73px;
+              left: 54px;
+            }
+            &__04 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -144.5px;
+              left: -1px;
+            }
+          }
+          &__ledge {
+            // Colors and sizes
+            height: 10px;
+            width: 126px;
+            background-color: $window-frame-color;
+            // Positioning and transforms
+            position: relative;
+            top: -8px;
+            left: -8px;
+          }
+        }
+        &__03 {
+          // Colors and sizes
+          width: 110px;
+          height: 140px;
+          background: #FFFFFF;
+          // Positioning and transforms
+          position: relative;
+          bottom: 0px;
+          top: -260px;
+          left: 90px;
+          &__curtain {
+            // Colors and sizes
+            height: 0;
+            // Positioning and transforms
+            position: relative;
+            &__01 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 84px solid #9f7d7b;
+            border-right: 54px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            }
+            &__02 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 83px solid #9f7d7b;
+            border-left: 53px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            bottom: 82px;
+            left: 58px;
+            }
+          }
+          &__frame {
+            height: 100%;
+            background-color: $window-inner-color-light;
+            &__01 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: 0;
+              left: -1px;
+            }
+            &__02 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -71px;
+              left: 54px;
+            }
+            &__03 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -73px;
+              left: 54px;
+            }
+            &__04 {
+              // Colors and sizes
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -144.5px;
+              left: -1px;
+            }
+          }
+          &__ledge {
+            // Colors and sizes
+            height: 10px;
+            width: 126px;
+            background-color: $window-frame-color;
+            // Positioning and transforms
+            position: relative;
+            top: -8px;
+            left: -8px;
+          }
+        }
+        &__04 {
+          // Colors and sizes
+          width: 160px;
+          height: 140px;
+          background: #FFFFFF;
+          border: 2px solid $window-frame-color;
+          // Positioning and transforms
+          position: relative;
+          left: 90px;
+          top: -177px;
+          &__curtain {
+            // Colors and sizes
+            height: 0;
+            // Positioning and transforms
+            position: relative;
+            &__01 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 100px solid #9f7d7b;
+            border-right: 80px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            }
+            &__02 {
+            // Colors and sizes
+            width: 0;
+            height: 0;
+            border-top: 100px solid #9f7d7b;
+            border-left: 80px solid transparent;
+            // Positioning and transforms
+            position: relative;
+            bottom: 100px;
+            left: 80px;
+            }
+          }
+          &__frame {
+            height: 100%;
+            background-color: $window-inner-color-light;
+            &__01 {
+              // Colors and sizes
+              width: 49%;
+              height: 30%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -2px;
+              left: -1.5px;
+            }
+            &__02 {
+              // Colors and sizes
+              width: 49%;
+              height: 30%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -48px;
+              left: 79px;
+            }
+            &__03 {
+              // Colors and sizes
+              width: 49%;
+              height: 30%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -50px;
+              left: 79px;
+            }
+            &__04 {
+              // Colors and sizes
+              width: 49%;
+              height: 30%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -96px;
+              left: -1.5px;
+            }
+          }
+          &__ledge {
+            // Colors and sizes
+            height: 10px;
+            width: 176px;
+            background-color: $window-frame-color;
+            // Positioning and transforms
+            position: relative;
+            top: -8px;
+            left: -8px;
+          }
+        }
+      }
+    }
+    .porch {
+      // Colors and sizes
+      width: 40%;
+      // Positioning and transforms
+      position: relative;
+      bottom: 99px;
+      left: 320px;
+      .stairs {
+        &__step {
+          position: relative;
+          bottom: 250px;
+          &__01 {
+            // Colors and sizes
+            height: 26px;
+            width: 100%;
+            background-color: $window-inner-color-dark;
+            border-top: 5px solid $window-inner-color-light;
+            // Positioning and transforms
+            position: relative;
+            top: 14px;
+          }
+          &__02 {
+            // Colors and sizes
+            height: 30px;
+            width: 90%;
+            background-color: $window-inner-color-dark;
+            border-top: 5px solid $window-inner-color-light;
+            // Positioning and transforms
+            position: relative;
+            top: -53px;
+            left: 12px;
+          }
+        }
+      }
+      .door {
+        // Colors and sizes
+        background-color: $door-color;
+        border-top: 3px solid #d1cac3;
+        border-left: 3px solid #d1cac3;
+        border-right: 3px solid #d1cac3;
+        height: 200px;
+        width: 60%;
+        // Positioning and transforms
+        position: relative;
+        bottom: 542px;
+        left: 45px;
+        &__window {
+          // Colors and sizes
+          transform: translate(-50%, -50%);
+          height: 50px;
+          width: 100px;
+          border-radius: 150px 150px 0 0;
+          border: 2px solid $window-frame-color;
+          background-color: $window-inner-color-light;
+          // Positioning and transforms
+          position: relative;
+          left: 72px;
+          top: 44px;
+          &__frame {
+            height: 100%;
+            background-color: $window-inner-color-dark;
+            &__01 {
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: 0;
+              left: 0;
+            }
+            &__02 {
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -52px;
+              left: 50px;
+            }
+            &__03 {
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -54px;
+              left: 50px;
+            }
+            &__04 {
+              width: 48%;
+              height: 48%;
+              border: 2px solid $window-frame-color;
+              // Positioning and transforms
+              position: relative;
+              top: -106px;
+              // left: 50px;
+            }
+          }
+        }
+        &__letter {
+          // Colors and sizes
+          background: #b89090;
+          border: 2px solid #d4af37;
+          width: 40px;
+          height: 15px;
+          border-radius: 2px;
+          margin: 2px;
+          // Positioning and transforms
+          position: relative;
+          left: 50px;
+          bottom: -65px;
+        }
+        &__handle {
+          // Colors and sizes
+          background: black;
+          border: 1px solid #d4af37;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          margin: 2px;
+          // Positioning and transforms
+          position: relative;
+          left: 111px;
+          bottom: -30px;
+        }
+      }
+    }
+    .bricks {
+      position: relative;
+      bottom: 450px;
+      .brick {
+        &__01 {
+          // Colors and sizes
+          background: $brick-color;
+          border-bottom: 2px solid #b8a59b;
+          width: 40px;
+          height: 15px;
+          border-radius: 2px;
+          margin: 2px;
+          // Positioning and transforms
+          position: relative;
+          left: 230px;
+          bottom: 185px;
+        }
+        &__02 {
+          // Colors and sizes
+          background: $brick-color;
+          border-bottom: 2px solid #b8a59b;
+          width: 40px;
+          height: 15px;
+          border-radius: 2px;
+          margin: 2px;
+          // Positioning and transforms
+          position: relative;
+          left: 258px;
+          bottom: 207px;
+          transform: rotate(90deg);
+        }
+        &__03 {
+          // Colors and sizes
+          background: $brick-color;
+          border-bottom: 2px solid #b8a59b;
+          width: 40px;
+          height: 15px;
+          border-radius: 2px;
+          margin: 2px;
+          // Positioning and transforms
+          position: relative;
+          bottom: 625px;
+          left: 20px;
+        }
+      }
+    }
+  }
+  .driveway {
+    // Colors and sizes
+    height: 50px;
+    width: 100vw;
+    // Positioning and transforms
+    position: relative;
+    &__road {
+      // Colors and sizes
+      height: 40px;
+      background: $grass-color;
+      border-top: 10px solid $road-color;
+      // Positioning and transforms
+    }
+  }
+  .plants {
+    // Colors and sizes
+    height: 0;
+    &__planter {
+      // Colors and sizes
+      width: 40px;
+      height: 45px;
+      background-color: #41454f;
+      border-radius: 60% 60% 40% 40% / 50% 50% 50% 50% ;
+      // Positioning and transforms
+      position: relative;
+      bottom: 162px;
+      left: 60px;
+      &__plant__01 {
+        position: relative;
+        left: -80px;
+        &__leaf__01 {
+          // Colors and sizes
+          width: 15px; height: 15px;
+          background-color: $leaf-color; 
+          border-radius: 0 100px;
+          // Positioning and transforms
+          position: relative;
+          bottom: 20px;
+          left: 85px;
+        }
+        &__leaf__02 {
+          // Colors and sizes
+          width: 15px; height: 15px;
+          background-color: $leaf-color; 
+          border-radius: 100px 0;
+          // Positioning and transforms
+          position: relative;
+          bottom: 35px;
+          left: 100px;
+        }
+        &__flower__01 {
+          // Colors and sizes
+          width: 15px; height: 15px;
+          background-color: $flower-color; 
+          border-radius: 50%;
+          // Positioning and transforms
+          position: relative;
+          bottom: 112px;
+          left: 92px;
+        }
+        &__stem__01 {
+          // Colors and sizes
+          width: 4px; 
+          height: 35px;
+          background-color: $leaf-color; 
+          // Positioning and transforms
+          position: relative;
+          bottom: 65px;
+          left: 98px;
+        }
+      }
+    }
+  }
+  .trees {
+    height: 0;
+    &__01 {
+      position: relative;
+      bottom: 600px;
+      left: -380px;
+      &__trunk__01 {
+        // Colors and sizes
+        height: 560px;
+        width: 40px;
+        background-color: $trunk-color;
+        border-left: 2px solid #b49c8b;
+        border-right: 2px solid #b5a38e;
+        // Positioning and transforms
+      }
+      &__leaf__01 {
+        // Colors and sizes
+        width: 150px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 405px;
+        left: -130px;
+      }
+      &__leaf__02 {
+        // Colors and sizes
+        width: 150px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 555px;
+        left: 20px;
+      }
+      &__leaf__03 {
+        // Colors and sizes
+        width: 125px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 805px;
+        left: -105px;
+      }
+      &__leaf__04 {
+        // Colors and sizes
+        width: 125px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 955px;
+        left: 20px;
+      }
+      &__leaf__05 {
+        // Colors and sizes
+        width: 100px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1200px;
+        left: -80px;
+      }
+      &__leaf__06 {
+        // Colors and sizes
+        width: 100px; height: 150px;
+        background-color: $tree-color-dark; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1350px;
+        left: 20px;
+      }
+    }
+    &__02 {
+      position: relative;
+      bottom: 2120px;
+      left: -470px;
+      &__trunk__01 {
+        // Colors and sizes
+        height: 620px;
+        width: 40px;
+        background-color: $trunk-color;
+        border-left: 2px solid #b49c8b;
+        border-right: 2px solid #b5a38e;
+        // Positioning and transforms
+      }
+      &__cover__01 {
+        // Colors and sizes
+        height: 200px;
+        width: 40px;
+        background-color: $tree-color-light;
+        border-left: 2px solid #b49c8b;
+        border-right: 2px solid #b5a38e;
+        // Positioning and transforms
+        position: relative;
+        bottom: 625px;
+      }
+      &__leaf__01 {
+        // Colors and sizes
+        width: 150px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 625px;
+        left: -130px;
+      }
+      &__leaf__02 {
+        // Colors and sizes
+        width: 150px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 775px;
+        left: 20px;
+      }
+      &__leaf__03 {
+        // Colors and sizes
+        width: 125px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1025px;
+        left: -105px;
+      }
+      &__leaf__04 {
+        // Colors and sizes
+        width: 125px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1175px;
+        left: 20px;
+      }
+      &__leaf__05 {
+        // Colors and sizes
+        width: 100px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 120px 0px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1430px;
+        left: -80px;
+      }
+      &__leaf__06 {
+        // Colors and sizes
+        width: 100px; height: 150px;
+        background-color: $tree-color-light; 
+        border-radius: 0 120px;
+        // Positioning and transforms
+        position: relative;
+        bottom: 1580px;
+        left: 20px;
+      }
+    }
+  }
+}
+
+// Leaf animations
+
+#leaf {
+  width: 20px; 
+  height: 20px;
+  background-color: #743320; 
+  border-radius: 0 120px;
+}
+
+.leaf {
+  position: fixed;
+  top: -5vh;
+  transform: translateY(0);
+  transform : rotate(180deg);
+  animation: fall 7s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
